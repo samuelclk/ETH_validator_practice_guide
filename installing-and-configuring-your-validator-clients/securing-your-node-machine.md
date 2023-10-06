@@ -3,7 +3,7 @@
 ### Disable remote password and root login
 
 {% hint style="info" %}
-_**Note:** Google Cloud VMs automatically do this for you but go ahead and follow through the steps anyway_
+_**Note:** Google Cloud VMs automatically do some of the following for you but go ahead and follow through the steps anyway_
 {% endhint %}
 
 Run the following command to open up the SSH server configuration file.

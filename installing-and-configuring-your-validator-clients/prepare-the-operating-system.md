@@ -74,12 +74,18 @@ Check your new swap space with the following commands.
 
 ```bash
 htop
+```
+
+_**Expected output:**_
+
+<figure><img src="../.gitbook/assets/image (70).png" alt=""><figcaption></figcaption></figure>
+
+Press `CTRL + C` to exit the `htop` interface and double check your swap settings by running:
+
+```
 free -h
 ```
 
 _**Expected output:**_
 
-<figure><img src="../.gitbook/assets/image (27).png" alt=""><figcaption><p><code>htop</code></p></figcaption></figure>
-
-<figure><img src="../.gitbook/assets/image (26).png" alt=""><figcaption><p><code>free -h</code></p></figcaption></figure>
-
+<figure><img src="../.gitbook/assets/image (71).png" alt=""><figcaption></figcaption></figure>

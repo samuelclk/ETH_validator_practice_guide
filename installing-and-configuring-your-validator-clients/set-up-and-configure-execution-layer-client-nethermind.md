@@ -22,6 +22,8 @@ sudo apt-get install unzip libsnappy-dev libc6-dev libc6 -y
 
 ### Install Nethermind and configure the service
 
+
+
 [Download](https://downloads.nethermind.io/) the latest version of Nethermind and run the checksum verification process to ensure that the downloaded file has not been tampered with.
 
 ```bash
@@ -29,6 +31,16 @@ cd
 curl -LO https://nethdev.blob.core.windows.net/builds/nethermind-1.20.1-9f39c0c7-linux-x64.zip
 echo "444bf523e0db9c23243b365e717b5b15 nethermind-1.20.1-9f39c0c7-linux-x64.zip" | md5sum --check
 ```
+
+{% hint style="info" %}
+Each downloadable file comes with it's own checksum (see below). Replace the actual checksum and URL of the download link in the code block above.
+
+{% hint style="info" %}
+Make sure to choose the amd64 version. Right click on the linked text and select "copy link address" to get the URL of the download link to `curl`.
+{% endhint %}
+{% endhint %}
+
+<figure><img src="../.gitbook/assets/image (72).png" alt=""><figcaption></figcaption></figure>
 
 _**Expected output:** Verify output of the checksum verification_
 

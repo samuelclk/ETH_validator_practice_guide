@@ -14,10 +14,32 @@ This is the tool that generates your validator private key. You can refer to the
 
 For simplicity, just paste the following code into the terminal of your **Google Cloud **_**VM**_**.**
 
+[Download](https://github.com/ConsenSys/teku/releases) the latest version of the Staking Deposit CLI tool and run the checksum verification process to ensure that the downloaded file has not been tampered with.
+
 _**Server machine:**_
 
 ```bash
-curl -LO <https://github.com/ethereum/staking-deposit-cli/releases/download/v2.5.0/staking_deposit-cli-d7b5304-linux-amd64.tar.gz>
+curl -LO https://github.com/ethereum/staking-deposit-cli/releases/download/v2.5.0/staking_deposit-cli-d7b5304-linux-amd64.tar.gz
+echo "3f51859d78ad47a3e258470f5a5caf03d19ed1d4307d517325b7bb8f6fcde6ef staking_deposit-cli-d7b5304-linux-amd64.tar.gz" | sha256sum --check
+```
+
+{% hint style="info" %}
+Each downloadable file comes with it's own checksum. Replace the actual checksum and URL of the download link in the code block above.
+
+{% hint style="info" %}
+Make sure to choose the amd64 version. Right click on the linked text and select "copy link address" to get the URL of the download link to `curl`.
+{% endhint %}
+{% endhint %}
+
+_**Expected output:** Verify output of the checksum verification._
+
+```
+teku-23.6.2.tar.gz: OK
+```
+
+If checksum is verified, extract the files and change directory into the newly extracted folder.
+
+```sh
 tar xvf staking_deposit-cli-d7b5304-linux-amd64.tar.gz
 cd staking_deposit-cli-d7b5304-linux-amd64
 ls
@@ -37,9 +59,13 @@ _**Server machine:**_
 ./deposit new-mnemonic --num_validators 1 --chain goerli --eth1_withdrawal_address 0x4D496CcC28058B1D74B7a19541663E21154f9c84
 ```
 
-Follow the instructions shown on your terminal.
+Follow the instructions shown on your terminal. You will need to paste the proxy withdrawal address (`0x4D496CcC28058B1D74B7a19541663E21154f9c84)` again when prompted.&#x20;
 
 ![Untitled](<../.gitbook/assets/Untitled (8).png>)
+
+{% hint style="info" %}
+**Important:** In actual deployment, the withdrawal address used during this process will be an ETH wallet that you control
+{% endhint %}
 
 After this, a seed phrase will be generated. Needless to say, if you lose this you will lose all your staked ETH. You will write this down on nice **physical notebook** using a **ballpoint (not ink) pen** and guard this with your life in actual deployment. But for today you can simply paste it into your notebook app of your laptop.
 
@@ -59,8 +85,7 @@ There will be 2 files that will be generated once you are done:
 Get the file name of your validator signing keystore by running the `ls` command in your `validator_keys` directory:
 
 ```sh
-cd
-cd staking_deposit-cli-d7b5304-linux-amd64/validator_keys
+cd ~/staking_deposit-cli-d7b5304-linux-amd64/validator_keys
 ls
 ```
 
@@ -76,8 +101,7 @@ Type in the password you used when generating your validator keys in the earlier
 _**Server machine:**_
 
 ```bash
-cd
-cd staking_deposit-cli-d7b5304-linux-amd64/validator_keys
+cd ~/staking_deposit-cli-d7b5304-linux-amd64/validator_keys
 ls
 ```
 

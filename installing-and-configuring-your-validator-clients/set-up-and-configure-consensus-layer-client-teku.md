@@ -3,6 +3,7 @@
 ### Install the dependencies - Java Runtime Environment
 
 ```bash
+cd
 sudo apt install -y default-jre
 ```
 
@@ -15,6 +16,14 @@ cd
 curl -LO https://artifacts.consensys.net/public/teku/raw/names/teku.tar.gz/versions/23.6.2/teku-23.6.2.tar.gz
 echo "c0b021ead22a514fdb8d5e2ce072549dc447dfdeed660eccef0e3a42890e56c2 teku-23.6.2.tar.gz" | sha256sum --check
 ```
+
+{% hint style="info" %}
+Each downloadable file comes with it's own checksum. Replace the actual checksum and URL of the download link in the code block above.
+
+{% hint style="info" %}
+Make sure to choose the amd64 version. Right click on the linked text and select "copy link address" to get the URL of the download link to `curl`.
+{% endhint %}
+{% endhint %}
 
 _**Expected output:** Verify output of the checksum verification._
 
@@ -166,7 +175,7 @@ ExecStart=/usr/local/bin/teku/bin/teku vc \
   --network=goerli \
   --data-path=/var/lib/teku \
   --validator-keys=/var/lib/teku/validator_keys:/var/lib/teku/validator_keys \
-  --beacon-node-api-endpoint=http://localhost:5051
+  --beacon-node-api-endpoint=http://localhost:5051 \
   --validators-proposer-default-fee-recipient=<designated wallet address> \
   --validators-proposer-blinded-blocks-enabled=true\
   --validators-graffiti="<yourgraffiti>" \
