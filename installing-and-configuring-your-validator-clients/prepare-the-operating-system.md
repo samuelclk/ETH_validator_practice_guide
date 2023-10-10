@@ -69,6 +69,8 @@ vm.swappiness=10
 vm.vfs_cache_pressure=50
 ```
 
+Once you're done, save and exit with `Ctrl+O`and `Enter`, then `Ctrl+X`.
+
 Check your new swap space with the following commands.
 
 ```bash
