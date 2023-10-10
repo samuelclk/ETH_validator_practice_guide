@@ -46,7 +46,6 @@ RAM     Swap Size
 Create swap file:
 
 ```bash
-sudo swapoff /swapfile
 sudo fallocate -l 4G /swapfile
 sudo chmod 600 /swapfile
 sudo mkswap /swapfile
