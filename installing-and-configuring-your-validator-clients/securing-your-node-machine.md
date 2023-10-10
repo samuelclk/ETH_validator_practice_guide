@@ -83,7 +83,7 @@ _**Add the following contents to the configuration file:**_
 [sshd]
 enabled = true
 banaction = ufw
-port = <your_chosen_SSH_port>
+port = 22
 filter = sshd
 logpath = %(sshd_log)s
 maxretry = 5
