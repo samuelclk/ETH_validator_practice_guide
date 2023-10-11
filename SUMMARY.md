@@ -5,7 +5,7 @@
 ## Hardware (VMs) & systems setup
 
 * [Preparing your Google Cloud Account](hardware-vms-and-systems-setup/preparing-your-google-cloud-account.md)
-* [Preparing your VM - Main validator node](hardware-vms-and-systems-setup/preparing-your-vm-main-validator-node.md)
+* [Preparing your VM - Validator node](hardware-vms-and-systems-setup/preparing-your-vm-validator-node.md)
 
 ## Installing & configuring your validator clients
 

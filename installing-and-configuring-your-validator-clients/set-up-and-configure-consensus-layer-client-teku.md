@@ -67,7 +67,7 @@ Paste the configuration parameters below into the file:
 
 ```bash
 [Unit]
-Description=Teku Beacon Node (Mainnet)
+Description=Teku Beacon Node (Goerli)
 Wants=network-online.target
 After=network-online.target
 [Service]
@@ -160,7 +160,7 @@ Paste the configuration parameters below into the file:
 
 ```bash
 [Unit]
-Description=Teku Validator Client (Mainnet)
+Description=Teku Validator Client (Goerli)
 Wants=network-online.target
 After=network-online.target
 [Service]

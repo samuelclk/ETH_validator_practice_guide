@@ -79,7 +79,7 @@ Paste the configuration parameters below into the file:
 
 ```bash
 [Unit]
-Description=Nethermind Execution Client (Mainnet)
+Description=Nethermind Execution Client (Goerli)
 After=network.target
 Wants=network.target
 
