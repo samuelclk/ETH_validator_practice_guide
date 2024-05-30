@@ -1,4 +1,4 @@
-# Preparing your VM - Main validator node
+# Preparing your VM - Validator node
 
 ## Create a new VM
 
@@ -20,9 +20,9 @@ Choose the following settings:
 
 <figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
-Select `Ubuntu` for the operating system, `Ubuntu 22.04 LTS x86` for the version, `Balanced persistent disk` for the boot disk type, and `500 GB` for the size of the storage.
+Select `Ubuntu` for the operating system, `Ubuntu 22.04 LTS x86` for the version, `Balanced persistent disk` for the boot disk type, and `250 GB` for the size of the storage.
 
-<figure><img src="../.gitbook/assets/image (63).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2024-05-30 at 3.58.01 PM.png" alt=""><figcaption></figcaption></figure>
 
 Check the first 2 boxes under the **"Firewall"** section.
 
